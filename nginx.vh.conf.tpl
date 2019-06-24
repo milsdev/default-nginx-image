@@ -58,7 +58,7 @@ server {
 		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 		fastcgi_split_path_info ^(.+\.php)(/.+)$;
 		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-
+		fastcgi_read_timeout ${FASTCGI_READ_TIMEOUT};
 		include fastcgi_params; ## See /etc/nginx/fastcgi_params
 	}
 }
